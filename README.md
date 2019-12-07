@@ -28,12 +28,15 @@ If something is missing, feel free adding it to a solution.
 The task objectives were as follows:
 
 * Create infrastructure-as-code as per proposed Architecture
+* `Makefile` has all the commands requred to run/test
+* Explain how to run in `README.md`
+
+Optional
+
 * Test Infrastructure (you can choose one or more test frameworks)
 	* [Terraform BDD Testing](https://github.com/eerkunt/terraform-compliance)
 	* [Terraform Unit Testing](https://github.com/bsnape/rspec-terraform)
 	* [Terraform Ultimate Testing](https://github.com/bsnape/rspec-terraform)
-* `Makefile` has all the commands requred to run/test
-* Explain how to run and test in `README.md`
 
 ## Deploy
 
@@ -45,6 +48,6 @@ TODO: Document how to test the setup
 
 ## Note
 
-Please do not make pull requests. Fork/Clone the repo instead and work on it.
+Not make pull requests. Fork/Clone the repo instead and work on it. Master branches only.
 
-There is no need to deploy infrastructure to AWS. Just make sure it fully valid terraform infrastructure-as-code setup and it has sufficient level of tests.
+There is no need to deploy infrastructure to AWS. Just make sure it fully valid terraform infrastructure-as-code setup.
