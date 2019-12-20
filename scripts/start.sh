@@ -31,6 +31,9 @@ for i in "$@"
         esac
     done
 
+source ${ROOT_PATH}/profiles/${PROFILE}/cred.txt
+export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+
 case ${COMMAND} in
     'help')
         echo "Helpdesk"
@@ -48,13 +51,12 @@ case ${COMMAND} in
             -input=false \
             -refresh=true \
             -var-file="${ROOT_PATH}/profiles/${PROFILE}/tf_vars.tfvars" \
-            -var-file="${ROOT_PATH}/profiles/${PROFILE}/aws_cred.tfvars" \
             -var="prefix=${PREFIX}" \
             -var="profile=${PROFILE}" \
             -var="pipe_root=${ROOT_PATH}"
 
-#        terraform-compliance -f ${ROOT_PATH}/tests \
-#                             -p ${ROOT_PATH}/terraform/aws/tfplan
+        terraform-compliance -f ${ROOT_PATH}/tests \
+                             -p ${ROOT_PATH}/terraform/aws/tfplan
         shift
         ;;
     'deploy' | 'cleanup')

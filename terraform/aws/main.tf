@@ -1,3 +1,15 @@
+provider "aws" {
+  region = var.region
+}
+
+locals {
+  prefix = var.profile == "prod" ? "" : "${var.prefix}-"
+}
+
+terraform {
+  backend "local" {}
+}
+
 // NETWORK
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
@@ -21,16 +33,15 @@ module "vpc" {
 // ECS
 module "ecs-fargate" {
   source                       = "cn-terraform/ecs-fargate/aws"
-  version                      = 2.0.7
+  version                      = "~> 2.0.7"
   name_preffix                 = var.prefix
   profile                      = var.profile
-  region                       = var.aws_cred["aws_location"]
+  region                       = var.region
   vpc_id                       = module.vpc.vgw_id
   availability_zones           = module.vpc.azs
 
   ecs_cluster_name             = format("%s%s", var.prefix, "FARGATE")
-  health_check_path            = var.health_check
-  entrypoint                   = var.service_endpoint
+  entrypoint                   = [var.service_endpoint]
 
   public_subnets_ids           = module.vpc.public_subnets
   private_subnets_ids          = module.vpc.private_subnets
@@ -41,6 +52,7 @@ module "ecs-fargate" {
   container_memory_reservation = 256
   essential                    = true
   container_port               = var.container_port
+  enable_ecs_managed_tags      = true
   environment = [
     { name  = "Name", value = format("%s%s", local.prefix, "ecs-cluter") },
     { name  = "Env",  value = var.profile }
@@ -49,20 +61,32 @@ module "ecs-fargate" {
   // useless inputs
   ecs_cluster_arn                = ""
   task_definition_arn            = ""
-  subnets                        = ""
+  subnets                        = []
 }
 
 // Application Load Balancer
 module "alb" {
   source                        = "terraform-aws-modules/alb/aws"
-  load_balancer_name            = "my-alb"
-  log_bucket_name               = format("%s%s", local.prefix, "bucket-logs")
   log_location_prefix           = "my-alb-logs"
   subnets                       = module.vpc.public_subnets
   tags                          = map("Environment", var.profile)
   vpc_id                        = module.vpc.vpc_id
   http_tcp_listeners            = list(map("port", "80", "protocol", "HTTP"))
-  http_tcp_listeners_count      = "1"
-  target_groups                 = list(map("name", "foo", "backend_protocol", "HTTP", "backend_port", "80"))
-  target_groups_count           = "1"
+  target_groups                 = [
+    {
+      name             = "foo",
+      backend_protocol = "HTTP",
+      backend_port     = "80",
+      health_check     = {
+        enabled             = true
+        interval            = "10"
+        path                = var.health_check
+        port                = "80"
+        healthy_threshold   = "3"
+        unhealthy_threshold = "9"
+        timeout             = "3"
+        protocol            = "http"
+      }
+    }
+  ]
 }
