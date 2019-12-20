@@ -40,7 +40,7 @@ module "ecs-fargate" {
   container_memory             = 1024
   container_memory_reservation = 256
   essential                    = true
-  container_port               = 80
+  container_port               = var.container_port
   environment = [
     { name  = "Name", value = format("%s%s", local.prefix, "ecs-cluter") },
     { name  = "Env",  value = var.profile }
