@@ -28,7 +28,7 @@ If something is missing, feel free adding it to a solution.
 The task objectives were as follows:
 
 * Create infrastructure-as-code as per proposed Architecture
-* `Makefile` has all the commands requred to run/test
+* `Makefile` has all the commands required to run/test
 * Explain how to run in `README.md`
 
 Optional
@@ -40,11 +40,15 @@ Optional
 
 ## Deploy
 
-TODO: Document how to run
+For start deploy `./scripts/start.sh deploy --prefix=test --profile=test`
+
+## Cleanup
+
+For start cleanup `./scripts/start.sh cleanup --prefix=test --profile=test`
 
 ## Test the whole setup
 
-TODO: Document how to test the setup
+For start tests `./scripts/start.sh test --prefix=test --profile=test`
 
 ## Note
 
