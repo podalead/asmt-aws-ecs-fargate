@@ -1,4 +1,7 @@
 .EXPORT_ALL_VARIABLES:
+COMMON_SCRIPT = ./scripts/start.sh
+PROFILE = test
+PREFIX = te
 
 .NOTPARALLEL:
 
@@ -9,9 +12,12 @@ help:
 
 deploy: ## Deploy Infrastructure
 	@echo "Deploy infrastructure"
+	$(COMMON_SCRIPT) deploy --profile=$(PROFILE) --prefix=$(PREFIX)
 
 test: ## Test infrastructure
 	@echo "Run the tests"
+	$(COMMON_SCRIPT) test --profile=$(PROFILE) --prefix=$(PREFIX)
 
 cleanup: ## Cleanup Infrastructure
 	@echo "Cleanup infrastructure"
+	$(COMMON_SCRIPT) cleanup --profile=$(PROFILE) --prefix=$(PREFIX)

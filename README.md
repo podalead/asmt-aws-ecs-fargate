@@ -37,18 +37,29 @@ Optional
 	* [Terraform BDD Testing](https://github.com/eerkunt/terraform-compliance)
 	* [Terraform Unit Testing](https://github.com/bsnape/rspec-terraform)
 	* [Terraform Ultimate Testing](https://github.com/bsnape/rspec-terraform)
+## Before call start.sh script
+Add envs with data to profile/<profile_name:test>/cred.txt:
+
+#### THIS FILE MARKED AS IGNORED FOR GIT
+
+```
+AWS_ACCESS_KEY_ID="<YOUR_ACCESS_KEY>"
+AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
+```
+     
+In profile/<profile_name:test>/tf_vars.tfvars defined task required vars.
 
 ## Deploy
 
-For start deploy `./scripts/start.sh deploy --prefix=test --profile=test`
+For start deploy use `make`
 
 ## Cleanup
 
-For start cleanup `./scripts/start.sh cleanup --prefix=test --profile=test`
+For start cleanup use `make`
 
 ## Test the whole setup
 
-For start tests `./scripts/start.sh test --prefix=test --profile=test`
+For start tests `make`
 
 ## Note
 
