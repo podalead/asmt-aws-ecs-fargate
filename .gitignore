@@ -15,6 +15,8 @@
 # Crash log files
 crash.log
 
+credentials*
+
 # Any type of creds
 **/cred*
 

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User={{ service_user }}
-WorkingDirectory={{ app_dest_folder }}/www
+WorkingDirectory={{ app_lib_folder }}
 EnvironmentFile=/etc/environment
 ExecStart=/usr/bin/env bash -c '/usr/bin/java -jar ./testerization.jar'
 SuccessExitStatus=143

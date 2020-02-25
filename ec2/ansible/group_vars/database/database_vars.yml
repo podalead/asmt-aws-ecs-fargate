@@ -1,0 +1,12 @@
+database_host: "fsdfgsd.cwdwztrhsygc.eu-central-1.rds.amazonaws.com"
+database_admin_user: "macho"
+database_admin_password: "testMatho_1"
+
+database_name: "testerization"
+database_user: "tester"
+database_pass: "Init123!!!"
+
+database_sql_script_folder: "{{ project_dir_profile }}/{{ profile }}/{{ prefix }}/sql"
+database_dump_files:
+  - "data.sql"
+  - "schema.sql"

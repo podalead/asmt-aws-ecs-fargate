@@ -1,23 +1,27 @@
-- name: "Install a apt of packages"
+- name: "Install simple packages"
   apt:
-    name: "{{ packages }}"
+    name: "{{ simple-apt-packages }}"
     state: present
     update_cache: yes
-  vars:
-    packages: "{{ apt-packages }}"
 
 - name: "Add repositories"
   apt_repository:
-    repo: 'ppa:ansible/ansible', "ppa:linuxuprising/java"
+    repo: "{{ apt-pack-repos }}"
+    state: present
+  loop: "{{ apt-pack-repos }}"
+
+- name: Add an Apt signing key, uses whichever key is at the URL
+  apt_key:
+    url: "{{ postgres-apt-key }}"
     state: present
 
 - name: "Install a apt of packages ansible"
   apt:
-    name: "ansible", "oracle-java12-installer"
+    name: "{{ complex-apt-packages }}"
     state: present
     update_cache: yes
 
-- name: "Install a pip of packages"
+- name: "Install pip packages"
   pip:
     name: "{{ pip-packages }}"
 
@@ -27,15 +31,16 @@
 
 - name: "Download Gradle and unarchive"
   unarchive:
-    src: "https://services.gradle.org/distributions/gradle-6.2.1-bin.zip"
+    src: "https://services.gradle.org/distributions/{{ gradle-version }}-bin.zip"
     dest: "/opt/gradle"
     mode: '0774'
     remote_src: yes
 
 - name: "Add gradle to path"
   lineinfile:
-    path: /etc/selinux/config
-    regexp: '^SELINUX='
-    line: SELINUX=enforcing
+    path: /etc/environment
+    line: "export PATH=$PATH:/opt/gradle/{{ gradle-version }}/bin"
+    state: present
 
-  export PATH=$PATH:/opt/gradle/gradle-6.2.1/bin
+- name: "Update Envs"
+  shell: source /etc/environment

@@ -1,0 +1,43 @@
+- name: "Download files from remote git repo"
+  git:
+    repo: "{{ app_git_repo }}"
+    dest: "{{ app_dest_folder }}"
+
+- name: "Compile app"
+  shell:
+    cmd: "./gradlew build"
+    chdir: "{{ app_dest_folder }}"
+
+- name: "Create lib dir"
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ service_user }}"
+    group: "admin"
+    mode: "0744"
+  loop:
+    - "{{ app_lib_folder }}"
+    - "{{ app_lib_folder }}/lib"
+    - "{{ app_lib_folder }}/systemd"
+
+- name: "Provision service unit file"
+  template:
+    src: "{{ project_dir_profile }}/{{ profile }}/unit/service.unit.j2"
+    dest: "{{ app_lib_folder }}/systemd/{{ service_unit}}.service"
+    owner: "{{ service_user }}"
+    group: "{{ admin }}"
+    mode: 0644
+
+- name: "Enable service for autostart"
+  systemd:
+    name: "{{ app_lib_folder }}/systemd/{{ service_unit}}.service"
+    enabled: true
+
+- name: "Reload systemd service"
+  systemd:
+    daemon_reload: yes
+
+- name: "Start services"
+  systemd:
+    name: "{{ service_unit}}.service"
+    state: "started"

@@ -1,0 +1,5 @@
+app_git_repo: "https://github.com/podalead/testerization.git"
+app_dest_folder: "{{ project_dir_home }}/testerization"
+app_lib_folder: "{{ project_dir_home }}/www"
+
+service_unit: "testerizator"

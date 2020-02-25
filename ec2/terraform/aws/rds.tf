@@ -5,25 +5,25 @@ module "rds" {
   vpc_security_group_ids = [ aws_security_group.rds.id, aws_security_group.egress.id ]
   vpc_id = module.vpc.vpc_id
 
-  engine = "postgres"
-  storage_type = "standard"
-  engine_version = "11.5"
-  instance_class = "db.t2.micro"
-  allocated_storage = 20
-  storage_encrypted = false
+  engine = var.rds_engine
+  storage_type = var.rds_storage_type
+  engine_version = var.rds_engine_version
+  instance_class = var.rds_instance_class
+  allocated_storage = var.rds_allocated_storage
+  storage_encrypted = var.rds_storage_encrypted
   subnet_ids = module.vpc.database_subnets
 
-  backup_retention_period = 0
-  backup_window = "03:00-06:00"
-  family = "postgres11"
-  identifier = "fsdfgsd"
-  name = "relacto"
-  name_prefix = "alocal-db-group"
+  backup_retention_period = var.rds_backup_retention_period
+  backup_window = var.rds_backup_window
+  family = var.rds_family
+  identifier = var.rds_identifier
+  name = var.rds_name
+  name_prefix = var.rds_name_prefix
 
-  parameters = []
-  username = "macho"
-  password = "testMatho_1"
-  port = "5432"
+  parameters = var.rds_parameters
+  username = var.rds_username
+  password = var.rds_password
+  port = var.rds_port
 
   tags = {
     Name = "gate"

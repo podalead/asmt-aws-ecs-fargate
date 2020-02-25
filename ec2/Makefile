@@ -1,5 +1,6 @@
 .EXPORT_ALL_VARIABLES:
-COMMON_SCRIPT = ./scripts/start.sh
+INFRA_SCRIPT = ./scripts/infra_deployment.sh
+CERT_SCRIPT = ./scripts/certs_loading.sh
 PROFILE = test
 PREFIX = te
 
@@ -10,14 +11,22 @@ PREFIX = te
 help:
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-deploy: ## Deploy Infrastructure
+certs: ## Upload certificates
+	@echo "Upload certificates"
+	$(CERT_SCRIPT) deploy --profile=$(PROFILE) --prefix=$(PREFIX)
+
+infra-deploy: ## Deploy Infrastructure
 	@echo "Deploy infrastructure"
-	$(COMMON_SCRIPT) deploy --profile=$(PROFILE) --prefix=$(PREFIX)
+	date
+	$(INFRA_SCRIPT) deploy --profile=$(PROFILE) --prefix=$(PREFIX)
+	date
 
 test: ## Test infrastructure
 	@echo "Run the tests"
-	$(COMMON_SCRIPT) test --profile=$(PROFILE) --prefix=$(PREFIX)
+	date
+	$(INFRA_SCRIPT) test --profile=$(PROFILE) --prefix=$(PREFIX)
+	date
 
-cleanup: ## Cleanup Infrastructure
+infra-cleanup: ## Cleanup Infrastructure
 	@echo "Cleanup infrastructure"
-	$(COMMON_SCRIPT) cleanup --profile=$(PROFILE) --prefix=$(PREFIX)
+	$(INFRA_SCRIPT) cleanup --profile=$(PROFILE) --prefix=$(PREFIX)

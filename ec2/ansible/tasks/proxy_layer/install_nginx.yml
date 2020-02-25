@@ -1,0 +1,12 @@
+- name: "Install nginx"
+  apt:
+    name: "{{ app }}"
+    state: present
+    update_cache: yes
+
+- name: "Enable service"
+  service:
+    name: "{{ app }}"
+    state: started
+    enabled: yes
+

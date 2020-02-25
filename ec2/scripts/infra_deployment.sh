@@ -33,7 +33,7 @@ for i in "$@"
     done
 
 source ${ROOT_PATH}/profiles/${PROFILE}/cred.txt
-export TF_VAR_aws_access_key TF_VAR_aws_secret_key
+export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 
 case ${COMMAND} in
     'help')
