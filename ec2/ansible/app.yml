@@ -1,0 +1,13 @@
+- hosts: "{{ app_hosts }}"
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: yes
+
+  vars_files:
+    - "{{ project_dir_root }}/ansible/group_vars/global_var.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/app_var.yml"
+
+  tasks:
+    - include: "{{ project_dir_ansible }}/tasks/app_layer/install_tomcat.yml"
+    - include: "{{ project_dir_ansible }}/tasks/proxy_layer/build_app.yml"

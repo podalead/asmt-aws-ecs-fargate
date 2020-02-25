@@ -1,0 +1,13 @@
+- hosts: "{{ db_host }}"
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: yes
+
+  vars_files:
+    - "{{ project_dir_root }}/ansible/group_vars/global_var.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/db_vars.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/db_data_vars.yml"
+
+  tasks:
+    - include: "{{ project_dir_ansible }}/tasks/data_layer/db_data.yml"

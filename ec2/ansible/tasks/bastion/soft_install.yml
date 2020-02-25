@@ -1,0 +1,41 @@
+- name: "Install a apt of packages"
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages: "{{ apt-packages }}"
+
+- name: "Add repositories"
+  apt_repository:
+    repo: 'ppa:ansible/ansible', "ppa:linuxuprising/java"
+    state: present
+
+- name: "Install a apt of packages ansible"
+  apt:
+    name: "ansible", "oracle-java12-installer"
+    state: present
+    update_cache: yes
+
+- name: "Install a pip of packages"
+  pip:
+    name: "{{ pip-packages }}"
+
+- name: "Install terraform switcher"
+  shell: "curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash"
+  when: "{{ terraform-need }}"
+
+- name: "Download Gradle and unarchive"
+  unarchive:
+    src: "https://services.gradle.org/distributions/gradle-6.2.1-bin.zip"
+    dest: "/opt/gradle"
+    mode: '0774'
+    remote_src: yes
+
+- name: "Add gradle to path"
+  lineinfile:
+    path: /etc/selinux/config
+    regexp: '^SELINUX='
+    line: SELINUX=enforcing
+
+  export PATH=$PATH:/opt/gradle/gradle-6.2.1/bin
