@@ -1,4 +1,4 @@
-- hosts: "{{ bastion_hosts }}"
+- hosts: "{{ host }}"
   become: yes
   become_user: root
   become_method: sudo
@@ -6,8 +6,8 @@
 
   vars_files:
     - "{{ project_dir_root }}/ansible/group_vars/global_var.yml"
-    - "{{ project_dir_root }}/ansible/group_vars/bastion_var.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/bastion/bastion_vars.yml"
 
   tasks:
-    - include: "{{ project_dir_ansible }}/tasks/proxy_layer/user_setup.yml"
-    - include: "{{ project_dir_ansible }}/tasks/proxy_layer/soft_install.yml"
+    - include: "{{ project_dir_ansible }}/tasks/bastion/user_setup.yml"
+    - include: "{{ project_dir_ansible }}/tasks/bastion/soft_install.yml"

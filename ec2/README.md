@@ -30,9 +30,3 @@ Currently in developing. SSL cert created on manually request by aws.
 ## Test the whole setup
 
 For start tests `make`
-
-## Note
-
-Not make pull requests. Fork/Clone the repo instead and work on it. Master branches only.
-
-There is no need to deploy infrastructure to AWS. Just make sure it fully valid terraform infrastructure-as-code setup.

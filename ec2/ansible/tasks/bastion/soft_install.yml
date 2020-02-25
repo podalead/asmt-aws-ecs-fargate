@@ -1,46 +1,55 @@
 - name: "Install simple packages"
   apt:
-    name: "{{ simple-apt-packages }}"
+    name: "{{ simple_apt_packages }}"
     state: present
     update_cache: yes
 
-- name: "Add repositories"
-  apt_repository:
-    repo: "{{ apt-pack-repos }}"
-    state: present
-  loop: "{{ apt-pack-repos }}"
-
 - name: Add an Apt signing key, uses whichever key is at the URL
   apt_key:
-    url: "{{ postgres-apt-key }}"
+    url: "{{ postgres_apt_key }}"
     state: present
+
+- name: "Add repositories"
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  loop: "{{ apt_pack_repos | flatten }}"
 
 - name: "Install a apt of packages ansible"
   apt:
-    name: "{{ complex-apt-packages }}"
+    name: "{{ complex_apt_packages }}"
     state: present
     update_cache: yes
 
 - name: "Install pip packages"
   pip:
-    name: "{{ pip-packages }}"
+    name: "{{ pip_packages }}"
 
 - name: "Install terraform switcher"
   shell: "curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash"
-  when: "{{ terraform-need }}"
+  when: terraform_need
+
+- name: "Create gradle dir"
+  file:
+    path: "/opt/gradle"
+    owner: "bilbo"
+    group: "admin"
+    state: directory
 
 - name: "Download Gradle and unarchive"
   unarchive:
-    src: "https://services.gradle.org/distributions/{{ gradle-version }}-bin.zip"
+    src: "https://services.gradle.org/distributions/{{ gradle_version }}-bin.zip"
     dest: "/opt/gradle"
     mode: '0774'
     remote_src: yes
 
 - name: "Add gradle to path"
-  lineinfile:
-    path: /etc/environment
-    line: "export PATH=$PATH:/opt/gradle/{{ gradle-version }}/bin"
+  template:
+    src: "{{ project_dir_profile }}/{{ profile }}/environment"
+    dest: "/etc/environment"
     state: present
 
 - name: "Update Envs"
-  shell: source /etc/environment
+  shell:
+    cmd: "source /etc/environment"
+    executable: /bin/bash

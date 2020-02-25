@@ -1,33 +1,32 @@
-simple-apt-packages:
+simple_apt_packages:
   - "mc"
   - "software-properties-common"
   - "apt-transport-https"
   - "ca-certificates"
   - "curl"
-  - "python-pip3"
-  - "mc"
+  - "python-pip"
+  - "libpq-dev"
+  - "python-dev"
   - "zip"
   - "nmon"
   - "wget"
 
-complex-apt-packages:
+complex_apt_packages:
   - "ansible"
-  - "oracle-java12-installer"
-  - "postgresql-{{ postgres-version }}"
+#  - "openjdk-12-jdk"
+  - "postgresql-{{ postgres_version }}"
 
-pip-packages:
+pip_packages:
   - "cryptography"
-  - "libpq-dev"
-  - "python-psycopg2"
-  - "python3-apt"
+  - "psycopg2-binary"
 
-apt-pack-repos:
+apt_pack_repos:
   - "ppa:ansible/ansible"
-  - "ppa:linuxuprising/java"
-  - "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
+#  - "ppa:linuxuprising/java"
+  - "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
 
-terraform-need: false
-gradle-version: "gradle-6.2.1"
-postgres-version: 11
-postgres-apt-key: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+terraform_need: false
+gradle_version: "gradle-6.2.1"
+postgres_version: 11
+postgres_apt_key: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
 
