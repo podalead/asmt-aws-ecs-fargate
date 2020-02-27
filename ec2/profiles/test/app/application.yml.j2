@@ -16,7 +16,7 @@ spring:
 
   # Datasource config
   datasource:
-    url: "{{ database_url }}"
+    url: "jdbc:postgresql://{{ database_url }}/{{ database_name }}"
     username: "{{ database_user }}"
     password: "{{ database_pass }}"
 
