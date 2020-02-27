@@ -6,8 +6,8 @@
 
   vars_files:
     - "{{ project_dir_root }}/ansible/group_vars/global_var.yml"
-    - "{{ project_dir_root }}/ansible/group_vars/db_vars.yml"
-    - "{{ project_dir_root }}/ansible/group_vars/db_data_vars.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/database_vars.yml"
+    - "{{ project_dir_root }}/ansible/group_vars/database_host_vars.yml"
 
   tasks:
     - include: "{{ project_dir_ansible }}/tasks/data_layer/db_data.yml"
