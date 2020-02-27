@@ -29,6 +29,15 @@ for i in "$@"
             echo "Defined prefix - ${PREFIX} and profile - ${PROFILE}"
             shift # past argument=value
             ;;
+            --docker_login=*)
+            DOCKER_LOGIN="${i#*=}"
+            echo "Defined docker login - ${DOCKER_LOGIN}"
+            shift # past argument=value
+            ;;
+            --docker_pass=*)
+            DOCKER_PASS="${i#*=}"
+            shift # past argument=value
+            ;;
         esac
     done
 
@@ -113,6 +122,8 @@ case ${COMMAND} in
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
             -e "host=*ci*" \
+            -e "docker_login=${DOCKER_LOGIN}" \
+            -e "docker_pass=${DOCKER_PASS}" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift

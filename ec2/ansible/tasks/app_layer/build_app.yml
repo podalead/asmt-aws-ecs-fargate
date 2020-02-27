@@ -1,8 +1,12 @@
 - name: "Create dirs"
   file:
-    path: "{{ item }}"
+    path: "{{ dir }}"
     state: directory
-  loop: "{{ dir | flatten }}"
+
+- name: "Clone app to folder"
+  file:
+    path: "{{ dir }}"
+    state: absent
 
 - name: "Clone app to folder"
   git:
@@ -16,13 +20,15 @@
 
 - name: "Create application config file"
   template:
-    src: "{{ project_dir_profile }}/{{ profile }}/app/application.yml"
+    src: "{{ project_dir_profile }}/{{ profile }}/app/application.yml.j2"
     dest: "{{ app_resourse_path }}/application.yml"
 
 - name: "Build container"
-  docker_container:
-    name: "{{ app_container_repo }}/{{ app_container_name }}"
+  docker_image:
+    name: "{{ app_image_repo }}/{{ app_image_name }}"
     build:
-      path: "{{ dir }}/testerization"
+      path: "{{ dir }}"
+      args:
+        JAR_FILE: "build/libs/*.jar"
     tag: "{{ app_tag }}"
     source: build
