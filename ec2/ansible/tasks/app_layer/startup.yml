@@ -10,7 +10,6 @@
     hostname: "{{ container_name }}"
     image: "{{ full_spec_repo_name }}"
     state: started
-    restart: yes
     ports:
       - "9000:9000"
     networks_cli_compatible: yes
