@@ -47,7 +47,7 @@ module "bastion" {
   subnets = list(aws_subnet.bastion.id)
   vpc_id = module.vpc.vpc_id
   key_name = aws_key_pair.key.key_name
-  allowed_cidr_blocks = var.bastion_allowed_ip
+  allowed_cidr_blocks = var.allowed_ip
   ami = data.aws_ami.base_ami.id
   tags = {
     Name = "my-bastion-server"

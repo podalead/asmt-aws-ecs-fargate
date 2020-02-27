@@ -13,7 +13,6 @@ simple_apt_packages:
 
 complex_apt_packages:
   - "ansible"
-#  - "openjdk-12-jdk"
   - "postgresql-{{ postgres_version }}"
 
 pip_packages:
@@ -22,11 +21,9 @@ pip_packages:
 
 apt_pack_repos:
   - "ppa:ansible/ansible"
-#  - "ppa:linuxuprising/java"
   - "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
 
 terraform_need: false
-gradle_version: "gradle-6.2.1"
 postgres_version: 11
 postgres_apt_key: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
 

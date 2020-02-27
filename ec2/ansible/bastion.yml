@@ -9,5 +9,4 @@
     - "{{ project_dir_root }}/ansible/group_vars/bastion/bastion_vars.yml"
 
   tasks:
-    - include: "{{ project_dir_ansible }}/tasks/bastion/user_setup.yml"
-    - include: "{{ project_dir_ansible }}/tasks/bastion/soft_install.yml"
+    - include: "{{ project_dir_ansible }}/tasks/common/user_setup.yml"

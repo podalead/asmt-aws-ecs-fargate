@@ -15,6 +15,7 @@ variable "network_cidr_database_block" {}
 variable "network_cidr_private_block" {}
 variable "network_cidr_public_block" {}
 variable "network_cidr_bastion_block" {}
+variable "network_cidr_ci_block" {}
 variable "key_name" {}
 
 variable "rds_engine" {}
@@ -35,9 +36,17 @@ variable "rds_username" {}
 variable "rds_password" {}
 variable "rds_port" {}
 
-variable "bastion_allowed_ip" {}
+variable "allowed_ip" {}
+
 variable "bastion_name" {}
 variable "bastion_namespace" {}
 variable "bastion_ssh_user" {}
 variable "bastion_stage" {}
+
+variable "ci_name" {}
+variable "ci_namespace" {}
+variable "ci_ssh_user" {}
+variable "ci_stage" {}
+
+
 

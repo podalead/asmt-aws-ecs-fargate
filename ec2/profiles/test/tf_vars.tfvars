@@ -3,21 +3,28 @@ region = "eu-central-1"
 key_name = "test.pub"
 dns_name = "testerization.cf"
 ami_id = "ami-0c67b2e8311e56fb4"
+allowed_ip = [ "77.47.199.232/32", "0.0.0.0/0" ]
 
 // vpc
 network_cidr_block = "10.0.0.0/16"
 network_cidr_bastion_block = "10.0.240.0/24"
+network_cidr_ci_block = "10.0.250.0/24"
 network_cidr_database_block = [ "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24" ]
 network_cidr_private_block = [ "10.0.110.0/24", "10.0.120.0/24", "10.0.130.0/24" ]
 network_cidr_public_block = [ "10.0.210.0/24", "10.0.220.0/24", "10.0.230.0/24"]
 availability_zones = [ "eu-central-1a", "eu-central-1b", "eu-central-1c" ]
 
 // bastion
-bastion_allowed_ip = [ "77.47.199.232/32", "0.0.0.0/0" ]
 bastion_name = "bastion-instance"
 bastion_namespace = "bs"
 bastion_ssh_user = "magnus"
 bastion_stage = "dev"
+
+// ci
+ci_name = "ci-instance"
+ci_namespace = "ci"
+ci_ssh_user = "magnus"
+ci_stage = "dev"
 
 // rds
 rds_engine = "postgres"

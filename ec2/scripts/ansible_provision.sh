@@ -88,6 +88,13 @@ case ${COMMAND} in
 
         shift
         ;;
+    'insta')
+        cd ${ROOT_PATH}/ansible
+
+        ansible-playbook insta.yml
+
+        shift
+        ;;
     *)
         echo "Not specified an action!"
         exit 1

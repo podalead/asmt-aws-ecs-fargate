@@ -29,27 +29,3 @@
   shell: "curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash"
   when: terraform_need
 
-- name: "Create gradle dir"
-  file:
-    path: "/opt/gradle"
-    owner: "bilbo"
-    group: "admin"
-    state: directory
-
-- name: "Download Gradle and unarchive"
-  unarchive:
-    src: "https://services.gradle.org/distributions/{{ gradle_version }}-bin.zip"
-    dest: "/opt/gradle"
-    mode: '0774'
-    remote_src: yes
-
-- name: "Add gradle to path"
-  template:
-    src: "{{ project_dir_profile }}/{{ profile }}/environment"
-    dest: "/etc/environment"
-    state: present
-
-- name: "Update Envs"
-  shell:
-    cmd: "source /etc/environment"
-    executable: /bin/bash
