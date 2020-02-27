@@ -1,4 +1,4 @@
-apt_packeges:
+apt_packages:
   - "python3-pip"
   - "python-pip"
 
