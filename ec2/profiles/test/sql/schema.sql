@@ -7,20 +7,18 @@ CREATE TABLE blog (
     create_date timestamp,
     message varchar(255),
     title varchar(255),
-    username varchar(255),
-    primary key (id)
-);
-
-CREATE TABLE blog_comments (
-    blog bigint not null,
-    comment bigint not null
+    username varchar(255)
 );
 
 CREATE TABLE comments (
     id bigserial not null primary key,
     message varchar(255),
-    username varchar(255),
-    primary key (id)
+    username varchar(255)
+);
+
+CREATE TABLE blog_comments (
+    blog bigint not null,
+    comment bigint not null
 );
 
 ALTER TABLE blog_comments ADD CONSTRAINT UK_th8pket2x59vxp1vakl47n4s UNIQUE (comment);
