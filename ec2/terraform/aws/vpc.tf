@@ -9,7 +9,7 @@ module "vpc" {
   private_subnets = var.network_cidr_private_block
   database_subnets = var.network_cidr_database_block
 
-  enable_nat_gateway = false
+  enable_nat_gateway = true
   single_nat_gateway   = false
   reuse_nat_ips        = false
   enable_vpn_gateway   = false
