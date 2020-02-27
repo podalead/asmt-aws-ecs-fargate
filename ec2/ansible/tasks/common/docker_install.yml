@@ -13,3 +13,8 @@
     name: "{{ docker_apt_package }}"
     state: present
     update_cache: yes
+
+- name: "Ensure service is enabled"
+  service:
+    name: "docker"
+    state: "restarted"
