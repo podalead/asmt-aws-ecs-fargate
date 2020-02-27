@@ -1,0 +1,4 @@
+network_name: "project_net"
+network_mode: "bridge"
+
+container_name: "testerizator"

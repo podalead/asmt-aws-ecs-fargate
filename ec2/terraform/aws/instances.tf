@@ -12,7 +12,11 @@ module "application_instance" {
   aws_ssh_pub_key_id = aws_key_pair.key.id
   instance_conf = var.app_instance_conf
   subnet_id = module.vpc.private_subnets
-  vpc_security_group_ids = [ aws_security_group.egress.id, aws_security_group.instance.id, aws_security_group.bastion_ssh.id ]
+  vpc_security_group_ids = [
+    aws_security_group.egress.id,
+    aws_security_group.instance.id,
+    aws_security_group.bastion_ssh.id,
+    aws_security_group.ci_access.id]
 
   tags = {
     Role = "app"
@@ -28,7 +32,11 @@ module "proxy_instance" {
   aws_ssh_pub_key_id = aws_key_pair.key.id
   instance_conf = var.proxy_instance_conf
   subnet_id = module.vpc.public_subnets
-  vpc_security_group_ids = [ aws_security_group.egress.id, aws_security_group.proxy.id, aws_security_group.bastion_ssh.id ]
+  vpc_security_group_ids = [
+    aws_security_group.egress.id,
+    aws_security_group.proxy.id,
+    aws_security_group.bastion_ssh.id,
+    aws_security_group.ci_access.id]
 
   tags = {
     Role = "proxy"

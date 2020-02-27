@@ -1,4 +1,4 @@
-- hosts: "{{ proxy_hosts }}"
+- hosts: "{{ hosts }}"
   become: yes
   become_user: root
   become_method: sudo

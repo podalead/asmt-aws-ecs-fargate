@@ -3,21 +3,27 @@ simple_apt_packages:
   - "software-properties-common"
   - "apt-transport-https"
   - "ca-certificates"
+  - "gnupg-agent"
   - "curl"
   - "python-pip"
+  - "python3-pip"
   - "libpq-dev"
   - "python-dev"
   - "zip"
   - "nmon"
   - "wget"
+  - "git"
 
-complex_apt_packages:
+apt_packages:
   - "ansible"
   - "postgresql-{{ postgres_version }}"
 
 pip_packages:
   - "cryptography"
   - "psycopg2-binary"
+  - "boto"
+  - "boto3"
+  - "docker-py"
 
 apt_pack_repos:
   - "ppa:ansible/ansible"
@@ -25,5 +31,7 @@ apt_pack_repos:
 
 terraform_need: false
 postgres_version: 11
-postgres_apt_key: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+
+apt_keys:
+  - "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
 

@@ -7,6 +7,7 @@ locals {
   profile_dir = format("%s/profiles/%s", var.pipe_root, var.profile)
   ssh_access_key_path = format("%s/ssh/%s", local.profile_dir, var.key_name)
   network_cidr_bastion_block = [var.network_cidr_bastion_block]
+  network_cidr_ci_block = [var.network_cidr_ci_block]
 }
 
 terraform {

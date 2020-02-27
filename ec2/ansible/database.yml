@@ -1,4 +1,4 @@
-- hosts: "{{ db_host }}"
+- hosts: "{{ host }}"
   become: yes
   become_user: root
   become_method: sudo

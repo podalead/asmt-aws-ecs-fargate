@@ -64,6 +64,21 @@ case ${COMMAND} in
 
         shift
         ;;
+    'ci')
+        cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
+
+        ansible-playbook ci.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*ci*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
+        shift
+        ;;
     'database')
         cd ${ROOT_PATH}/ansible
         shift
@@ -85,13 +100,6 @@ case ${COMMAND} in
 
         echo $(${ROOT_PATH}/ansible/aws.py --list) >> ${ROOT_PATH}/ansible/test.json
         cat ${ROOT_PATH}/ansible/test.json
-
-        shift
-        ;;
-    'insta')
-        cd ${ROOT_PATH}/ansible
-
-        ansible-playbook insta.yml
 
         shift
         ;;

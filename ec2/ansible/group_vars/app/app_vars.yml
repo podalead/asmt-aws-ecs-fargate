@@ -1,5 +1,6 @@
-app_git_repo: "https://github.com/podalead/testerization.git"
-app_dest_folder: "{{ project_dir_home }}/testerization"
-app_lib_folder: "{{ project_dir_home }}/www"
+apt_packeges:
+  - "python3-pip"
+  - "python-pip"
 
-service_unit: "testerizator"
+pip_packages:
+  - "docker-py"

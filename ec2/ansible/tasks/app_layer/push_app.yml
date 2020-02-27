@@ -1,0 +1,6 @@
+- name: "Push container to hub repo"
+  docker_container:
+    name: "{{ full_spec_repo_name }}"
+    repository: "{{ full_spec_repo_name }}"
+    push: yes
+    source: local

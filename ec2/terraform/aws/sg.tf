@@ -1,3 +1,15 @@
+resource "aws_security_group" "ci_access" {
+  name = "sg_ci"
+  vpc_id = module.vpc.vpc_id
+
+  ingress {
+    cidr_blocks = local.network_cidr_ci_block
+    from_port = 0
+    to_port = 65345
+    protocol = "tcp"
+  }
+}
+
 resource "aws_security_group" "bastion_ssh" {
   name = "sg_bastion"
   vpc_id = module.vpc.vpc_id
@@ -45,7 +57,7 @@ resource "aws_security_group" "proxy" {
 
 resource "aws_security_group_rule" "rds_input" {
   security_group_id = aws_security_group.rds.id
-  cidr_blocks = concat(var.network_cidr_private_block, local.network_cidr_bastion_block)
+  cidr_blocks = concat(var.network_cidr_private_block, local.network_cidr_bastion_block, local.network_cidr_ci_block)
   type = "ingress"
   protocol = "tcp"
   from_port = 5432
