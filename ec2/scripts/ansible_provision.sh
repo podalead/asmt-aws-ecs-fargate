@@ -89,6 +89,7 @@ case ${COMMAND} in
         ;;
     'app-soft-install')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
 
         ansible-playbook app_soft_install.yml \
             --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
@@ -103,6 +104,7 @@ case ${COMMAND} in
         ;;
     'app-build')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
 
         ansible-playbook ci_build_app.yml \
             --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
@@ -117,6 +119,7 @@ case ${COMMAND} in
         ;;
     'app-startup')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
 
         ansible-playbook app_startup.yml \
             --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
