@@ -106,6 +106,15 @@ case ${COMMAND} in
         cd ${ROOT_PATH}/ansible
         PROVISION_USER="ubuntu"
 
+        ansible-playbook proxy.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*_ci_*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
         shift
         ;;
     'app-soft-install')

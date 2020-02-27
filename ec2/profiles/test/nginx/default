@@ -1,5 +1,5 @@
 upstream testerizator {
-    {% for private_ip in test_app_private_ips %-}
+    {% for private_ip in app_private_ips %-}
     server {{ private_ip }}:8080;
     {% endfor %-}
 }

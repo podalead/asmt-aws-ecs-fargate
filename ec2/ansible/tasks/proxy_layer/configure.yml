@@ -20,6 +20,6 @@
 
 - name: "Enable service"
   service:
-    name: "{{ app }}"
+    name: "nginx"
     state: restarted
     enabled: yes
