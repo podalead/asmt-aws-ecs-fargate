@@ -12,6 +12,7 @@ module "application_instance" {
   aws_ssh_pub_key_id = aws_key_pair.key.id
   instance_conf = var.app_instance_conf
   subnet_id = module.vpc.private_subnets
+  associate_public_ip_address = false
   vpc_security_group_ids = [
     aws_security_group.egress.id,
     aws_security_group.instance.id,
@@ -32,6 +33,7 @@ module "proxy_instance" {
   aws_ssh_pub_key_id = aws_key_pair.key.id
   instance_conf = var.proxy_instance_conf
   subnet_id = module.vpc.public_subnets
+  associate_public_ip_address = true
   vpc_security_group_ids = [
     aws_security_group.egress.id,
     aws_security_group.proxy.id,

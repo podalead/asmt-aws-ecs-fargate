@@ -112,7 +112,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*_ci_*" \
+            -e "host=*_proxy_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift

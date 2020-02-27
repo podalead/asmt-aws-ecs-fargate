@@ -1,5 +1,6 @@
 variable "instance_conf" {}
 variable "aws_availability_zone" {}
+variable "associate_public_ip_address" {}
 variable "vpc_security_group_ids" {}
 variable "aws_ssh_pub_key_id" {}
 variable "subnet_id" {}

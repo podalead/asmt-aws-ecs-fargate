@@ -8,7 +8,7 @@ resource "aws_instance" "ec2_instance" {
   key_name = var.aws_ssh_pub_key_id
   instance_type = lookup(var.instance_conf, "type", "t3a.small")
 
-  associate_public_ip_address = false
+  associate_public_ip_address = var.associate_public_ip_address
 
   tags = merge(var.tags,
     map("Name", format("%s-%s", var.name, count.index)),
