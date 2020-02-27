@@ -59,7 +59,6 @@ case ${COMMAND} in
         ;;
     'bastion')
         cd ${ROOT_PATH}/ansible
-
         PROVISION_USER="ubuntu"
 
         ansible-playbook bastion.yml \
@@ -90,10 +89,23 @@ case ${COMMAND} in
         ;;
     'database')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
+
+        ansible-playbook database.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*ci*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
         shift
         ;;
     'proxy')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
+
         shift
         ;;
     'app-soft-install')
@@ -145,6 +157,7 @@ case ${COMMAND} in
         ;;
     'instance')
         cd ${ROOT_PATH}/ansible
+        PROVISION_USER="ubuntu"
 
         echo $(${ROOT_PATH}/ansible/aws.py --list) >> ${ROOT_PATH}/ansible/test.json
         cat ${ROOT_PATH}/ansible/test.json

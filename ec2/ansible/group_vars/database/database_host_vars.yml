@@ -1,4 +1,4 @@
 database_url: "testerization.cwdwztrhsygc.eu-central-1.rds.amazonaws.com"
-database_user: "macho"
-database_pass: "testMatho_1"
+database_user: "tester"
+database_pass: "Init123!!!"
 database_name: "testerization"

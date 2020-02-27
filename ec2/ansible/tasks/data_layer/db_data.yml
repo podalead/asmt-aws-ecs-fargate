@@ -3,7 +3,7 @@
   become_user: "postgres"
   become_method: "sudo"
   postgresql_db:
-    login_host: "{{ database_host }}"
+    login_host: "{{ database_url }}"
     login_user: "{{ database_admin_user }}"
     login_password: "{{ database_admin_password }}"
     name: "{{ database_name }}"
@@ -17,7 +17,7 @@
   become_user: "postgres"
   become_method: "sudo"
   postgresql_user:
-    login_host: "{{ database_host }}"
+    login_host: "{{ database_url }}"
     login_user: "{{ database_admin_user }}"
     login_password: "{{ database_admin_password }}"
     db: "{{ database_name }}"
@@ -31,11 +31,11 @@
   become_user: "postgres"
   become_method: "sudo"
   postgresql_privs:
-    login_host: "{{ database_host }}"
+    login_host: "{{ database_url }}"
     login_user: "{{ database_admin_user }}"
     login_password: "{{ database_admin_password }}"
     database: "{{ database_name }}"
-    objs: ALL_IN_SCHEMA
+    objs: ALL_DEFAULT
     privs: ALL
     type: default_privs
     role: "{{ database_user }}"
@@ -45,5 +45,13 @@
   become: yes
   become_method: "sudo"
   become_user: "postgres"
-  command: "psql -h {{ database_host }} -U {{ database_admin_user }} -d {{ database_name }} -a -f {{ pgsql_sql_script_folder }}/{{ item }}"
+  shell: |
+    set timeout -1
+    spawn psql -h {{ database_url }} -U {{ database_admin_user }} -d {{ database_name }} -a -f {{ database_sql_script_folder }}/{{ item }}
+    match_max 100000
+    expect "Password*"
+    send -- "{{ database_admin_password }}\r"
+    expect eof
+  args:
+    executable: /usr/bin/expect
   with_items: "{{ database_dump_files }}"
