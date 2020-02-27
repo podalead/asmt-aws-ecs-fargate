@@ -87,12 +87,46 @@ case ${COMMAND} in
         cd ${ROOT_PATH}/ansible
         shift
         ;;
-    'app')
+    'app-soft-install')
         cd ${ROOT_PATH}/ansible
+
+        ansible-playbook app_soft_install.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*app*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
         shift
         ;;
-    'clone-repo')
+    'app-build')
         cd ${ROOT_PATH}/ansible
+
+        ansible-playbook ci_build_app.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*app*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
+        shift
+        ;;
+    'app-startup')
+        cd ${ROOT_PATH}/ansible
+
+        ansible-playbook app_startup.yml \
+            --private-key ${ROOT_PATH}/profiles/${PROFILE}/ssh/test \
+            -i aws.py \
+            -u ${PROVISION_USER} \
+            -e "profile=${PROFILE}" \
+            -e "prefix=${PREFIX}" \
+            -e "host=*app*" \
+            -e "project_dir_root=${ROOT_PATH}"
+
         shift
         ;;
     'instance')
