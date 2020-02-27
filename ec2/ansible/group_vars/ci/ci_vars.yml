@@ -5,6 +5,7 @@ simple_apt_packages:
   - "ca-certificates"
   - "gnupg-agent"
   - "curl"
+  - "expect"
   - "python-pip"
   - "python3-pip"
   - "libpq-dev"

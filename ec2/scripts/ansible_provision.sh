@@ -67,7 +67,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*bastion*" \
+            -e "host=*_bastion_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift
@@ -82,7 +82,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*ci*" \
+            -e "host=*_ci_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift
@@ -97,7 +97,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*ci*" \
+            -e "host=*_ci_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift
@@ -118,7 +118,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*app*" \
+            -e "host=*_application_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift
@@ -133,7 +133,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*ci*" \
+            -e "host=*_ci_*" \
             -e "docker_login=${DOCKER_LOGIN}" \
             -e "docker_pass=${DOCKER_PASS}" \
             -e "project_dir_root=${ROOT_PATH}"
@@ -150,7 +150,7 @@ case ${COMMAND} in
             -u ${PROVISION_USER} \
             -e "profile=${PROFILE}" \
             -e "prefix=${PREFIX}" \
-            -e "host=*app*" \
+            -e "host=*_application_*" \
             -e "project_dir_root=${ROOT_PATH}"
 
         shift
