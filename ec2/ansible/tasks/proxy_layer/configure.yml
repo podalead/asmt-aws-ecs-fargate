@@ -8,7 +8,7 @@
 
 - name: "app_hostname"
   debug:
-    msg: "app_hostname = {{ app_hostname }}, app_ip = {{ app_ip }}"
+    msg: "app_hostname = {{ app_hostname }}"
 
 - name: "app_ip"
   debug:
