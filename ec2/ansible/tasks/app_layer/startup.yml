@@ -11,7 +11,7 @@
     image: "{{ full_spec_repo_name }}"
     state: started
     ports:
-      - "9000:9000"
+      - "{{ app_port }}:{{ app_port }}"
     networks_cli_compatible: yes
     network_mode: "{{ network_mode }}"
     networks:

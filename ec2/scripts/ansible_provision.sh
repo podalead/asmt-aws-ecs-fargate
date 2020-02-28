@@ -46,6 +46,8 @@ export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 export ANSIBLE_CONFIG="${ROOT_PATH}/ansible/ansible.cfg"
 export EC2_INI_PATH="${ROOT_PATH}/ansible/.aws.ini"
 
+chmod 600 ${ROOT_PATH}/profiles/${PROFILE}/ssh/${PREFIX}
+
 case ${COMMAND} in
     'help')
         echo "Helpdesk"
