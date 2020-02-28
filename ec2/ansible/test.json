@@ -664,3 +664,442 @@
     "my_ci_server"
   ]
 }
+{
+  "_meta": {
+    "hostvars": {
+      "my_bastion_server": {
+        "ansible_host": "3.127.28.146",
+        "ec2__in_monitoring_element": false,
+        "ec2_account_id": "531822475849",
+        "ec2_ami_launch_index": "0",
+        "ec2_architecture": "x86_64",
+        "ec2_block_devices": {
+          "sda1": "vol-0c307f73db1fe5d9e"
+        },
+        "ec2_client_token": "",
+        "ec2_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com",
+        "ec2_ebs_optimized": false,
+        "ec2_eventsSet": "",
+        "ec2_group_name": "",
+        "ec2_hypervisor": "xen",
+        "ec2_id": "i-0f989ac1a12a6f5be",
+        "ec2_image_id": "ami-0718a1ae90971ce4d",
+        "ec2_instance_profile": "",
+        "ec2_instance_type": "t3a.small",
+        "ec2_ip_address": "3.127.28.146",
+        "ec2_item": "",
+        "ec2_kernel": "",
+        "ec2_key_name": "te20200227014418297300000002",
+        "ec2_launch_time": "2020-02-27T01:44:25.000Z",
+        "ec2_monitored": false,
+        "ec2_monitoring": "",
+        "ec2_monitoring_state": "disabled",
+        "ec2_persistent": false,
+        "ec2_placement": "eu-central-1c",
+        "ec2_platform": "",
+        "ec2_previous_state": "",
+        "ec2_previous_state_code": 0,
+        "ec2_private_dns_name": "ip-10-0-240-67.eu-central-1.compute.internal",
+        "ec2_private_ip_address": "10.0.240.67",
+        "ec2_public_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com",
+        "ec2_ramdisk": "",
+        "ec2_reason": "",
+        "ec2_region": "eu-central-1",
+        "ec2_requester_id": "",
+        "ec2_root_device_name": "/dev/sda1",
+        "ec2_root_device_type": "ebs",
+        "ec2_security_group_ids": "sg-034f307e166fbaf2e,sg-05747011ada28554c",
+        "ec2_security_group_names": "bs-dev-bastion-instance,sg_egress",
+        "ec2_sourceDestCheck": "true",
+        "ec2_spot_instance_request_id": "",
+        "ec2_state": "running",
+        "ec2_state_code": 16,
+        "ec2_state_reason": "",
+        "ec2_subnet_id": "subnet-00902f51c7f777971",
+        "ec2_tag_Name": "my-bastion-server",
+        "ec2_tag_Namespace": "bs",
+        "ec2_tag_Role": "bastion",
+        "ec2_tag_Stage": "dev",
+        "ec2_virtualization_type": "hvm",
+        "ec2_vpc_id": "vpc-04fd72970059e8ab1"
+      },
+      "my_ci_server": {
+        "ansible_host": "3.122.133.227",
+        "ec2__in_monitoring_element": false,
+        "ec2_account_id": "531822475849",
+        "ec2_ami_launch_index": "0",
+        "ec2_architecture": "x86_64",
+        "ec2_block_devices": {
+          "sda1": "vol-07d97c79d282fbc74"
+        },
+        "ec2_client_token": "",
+        "ec2_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com",
+        "ec2_ebs_optimized": false,
+        "ec2_eventsSet": "",
+        "ec2_group_name": "",
+        "ec2_hypervisor": "xen",
+        "ec2_id": "i-09db7c63f327eb292",
+        "ec2_image_id": "ami-0718a1ae90971ce4d",
+        "ec2_instance_profile": "",
+        "ec2_instance_type": "t3a.small",
+        "ec2_ip_address": "3.122.133.227",
+        "ec2_item": "",
+        "ec2_kernel": "",
+        "ec2_key_name": "te20200227014418297300000002",
+        "ec2_launch_time": "2020-02-27T01:57:51.000Z",
+        "ec2_monitored": false,
+        "ec2_monitoring": "",
+        "ec2_monitoring_state": "disabled",
+        "ec2_persistent": false,
+        "ec2_placement": "eu-central-1b",
+        "ec2_platform": "",
+        "ec2_previous_state": "",
+        "ec2_previous_state_code": 0,
+        "ec2_private_dns_name": "ip-10-0-250-17.eu-central-1.compute.internal",
+        "ec2_private_ip_address": "10.0.250.17",
+        "ec2_public_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com",
+        "ec2_ramdisk": "",
+        "ec2_reason": "",
+        "ec2_region": "eu-central-1",
+        "ec2_requester_id": "",
+        "ec2_root_device_name": "/dev/sda1",
+        "ec2_root_device_type": "ebs",
+        "ec2_security_group_ids": "sg-05747011ada28554c,sg-06d1ac2833df5757b",
+        "ec2_security_group_names": "sg_egress,ci-dev-ci",
+        "ec2_sourceDestCheck": "true",
+        "ec2_spot_instance_request_id": "",
+        "ec2_state": "running",
+        "ec2_state_code": 16,
+        "ec2_state_reason": "",
+        "ec2_subnet_id": "subnet-03dc4508e11b36458",
+        "ec2_tag_Name": "my-ci-server",
+        "ec2_tag_Namespace": "ci",
+        "ec2_tag_Role": "ci",
+        "ec2_tag_Stage": "dev",
+        "ec2_virtualization_type": "hvm",
+        "ec2_vpc_id": "vpc-04fd72970059e8ab1"
+      },
+      "my_proxy_server_0": {
+        "ansible_host": "3.127.57.26",
+        "ec2__in_monitoring_element": false,
+        "ec2_account_id": "531822475849",
+        "ec2_ami_launch_index": "0",
+        "ec2_architecture": "x86_64",
+        "ec2_block_devices": {
+          "sda1": "vol-05064f93636b487ae"
+        },
+        "ec2_client_token": "",
+        "ec2_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com",
+        "ec2_ebs_optimized": false,
+        "ec2_eventsSet": "",
+        "ec2_group_name": "",
+        "ec2_hypervisor": "xen",
+        "ec2_id": "i-0fb9be28f577517e6",
+        "ec2_image_id": "ami-0718a1ae90971ce4d",
+        "ec2_instance_profile": "",
+        "ec2_instance_type": "t3a.small",
+        "ec2_ip_address": "3.127.57.26",
+        "ec2_item": "",
+        "ec2_kernel": "",
+        "ec2_key_name": "te20200227014418297300000002",
+        "ec2_launch_time": "2020-02-27T10:12:14.000Z",
+        "ec2_monitored": false,
+        "ec2_monitoring": "",
+        "ec2_monitoring_state": "disabled",
+        "ec2_persistent": false,
+        "ec2_placement": "eu-central-1a",
+        "ec2_platform": "",
+        "ec2_previous_state": "",
+        "ec2_previous_state_code": 0,
+        "ec2_private_dns_name": "ip-10-0-210-33.eu-central-1.compute.internal",
+        "ec2_private_ip_address": "10.0.210.33",
+        "ec2_public_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com",
+        "ec2_ramdisk": "",
+        "ec2_reason": "",
+        "ec2_region": "eu-central-1",
+        "ec2_requester_id": "",
+        "ec2_root_device_name": "/dev/sda1",
+        "ec2_root_device_type": "ebs",
+        "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df",
+        "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci",
+        "ec2_sourceDestCheck": "true",
+        "ec2_spot_instance_request_id": "",
+        "ec2_state": "running",
+        "ec2_state_code": 16,
+        "ec2_state_reason": "",
+        "ec2_subnet_id": "subnet-07f97be1b4219bd6c",
+        "ec2_tag_Name": "my-proxy-server-0",
+        "ec2_tag_Role": "proxy",
+        "ec2_tag_Zone": "eu-central-1a",
+        "ec2_virtualization_type": "hvm",
+        "ec2_vpc_id": "vpc-04fd72970059e8ab1"
+      },
+      "my_proxy_server_1": {
+        "ansible_host": "18.196.140.65",
+        "ec2__in_monitoring_element": false,
+        "ec2_account_id": "531822475849",
+        "ec2_ami_launch_index": "0",
+        "ec2_architecture": "x86_64",
+        "ec2_block_devices": {
+          "sda1": "vol-09e327e61cbaf5d96"
+        },
+        "ec2_client_token": "",
+        "ec2_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com",
+        "ec2_ebs_optimized": false,
+        "ec2_eventsSet": "",
+        "ec2_group_name": "",
+        "ec2_hypervisor": "xen",
+        "ec2_id": "i-06f571d6287945908",
+        "ec2_image_id": "ami-0718a1ae90971ce4d",
+        "ec2_instance_profile": "",
+        "ec2_instance_type": "t3a.small",
+        "ec2_ip_address": "18.196.140.65",
+        "ec2_item": "",
+        "ec2_kernel": "",
+        "ec2_key_name": "te20200227014418297300000002",
+        "ec2_launch_time": "2020-02-27T10:12:24.000Z",
+        "ec2_monitored": false,
+        "ec2_monitoring": "",
+        "ec2_monitoring_state": "disabled",
+        "ec2_persistent": false,
+        "ec2_placement": "eu-central-1b",
+        "ec2_platform": "",
+        "ec2_previous_state": "",
+        "ec2_previous_state_code": 0,
+        "ec2_private_dns_name": "ip-10-0-220-76.eu-central-1.compute.internal",
+        "ec2_private_ip_address": "10.0.220.76",
+        "ec2_public_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com",
+        "ec2_ramdisk": "",
+        "ec2_reason": "",
+        "ec2_region": "eu-central-1",
+        "ec2_requester_id": "",
+        "ec2_root_device_name": "/dev/sda1",
+        "ec2_root_device_type": "ebs",
+        "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df",
+        "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci",
+        "ec2_sourceDestCheck": "true",
+        "ec2_spot_instance_request_id": "",
+        "ec2_state": "running",
+        "ec2_state_code": 16,
+        "ec2_state_reason": "",
+        "ec2_subnet_id": "subnet-05fad3db73c8b9017",
+        "ec2_tag_Name": "my-proxy-server-1",
+        "ec2_tag_Role": "proxy",
+        "ec2_tag_Zone": "eu-central-1b",
+        "ec2_virtualization_type": "hvm",
+        "ec2_vpc_id": "vpc-04fd72970059e8ab1"
+      },
+      "my_proxy_server_2": {
+        "ansible_host": "52.29.163.8",
+        "ec2__in_monitoring_element": false,
+        "ec2_account_id": "531822475849",
+        "ec2_ami_launch_index": "0",
+        "ec2_architecture": "x86_64",
+        "ec2_block_devices": {
+          "sda1": "vol-0cf9789b1210f4a64"
+        },
+        "ec2_client_token": "",
+        "ec2_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com",
+        "ec2_ebs_optimized": false,
+        "ec2_eventsSet": "",
+        "ec2_group_name": "",
+        "ec2_hypervisor": "xen",
+        "ec2_id": "i-0dcb45356296f4a48",
+        "ec2_image_id": "ami-0718a1ae90971ce4d",
+        "ec2_instance_profile": "",
+        "ec2_instance_type": "t3a.small",
+        "ec2_ip_address": "52.29.163.8",
+        "ec2_item": "",
+        "ec2_kernel": "",
+        "ec2_key_name": "te20200227014418297300000002",
+        "ec2_launch_time": "2020-02-27T10:12:44.000Z",
+        "ec2_monitored": false,
+        "ec2_monitoring": "",
+        "ec2_monitoring_state": "disabled",
+        "ec2_persistent": false,
+        "ec2_placement": "eu-central-1c",
+        "ec2_platform": "",
+        "ec2_previous_state": "",
+        "ec2_previous_state_code": 0,
+        "ec2_private_dns_name": "ip-10-0-230-97.eu-central-1.compute.internal",
+        "ec2_private_ip_address": "10.0.230.97",
+        "ec2_public_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com",
+        "ec2_ramdisk": "",
+        "ec2_reason": "",
+        "ec2_region": "eu-central-1",
+        "ec2_requester_id": "",
+        "ec2_root_device_name": "/dev/sda1",
+        "ec2_root_device_type": "ebs",
+        "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df",
+        "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci",
+        "ec2_sourceDestCheck": "true",
+        "ec2_spot_instance_request_id": "",
+        "ec2_state": "running",
+        "ec2_state_code": 16,
+        "ec2_state_reason": "",
+        "ec2_subnet_id": "subnet-06fbda187f02fa4ff",
+        "ec2_tag_Name": "my-proxy-server-2",
+        "ec2_tag_Role": "proxy",
+        "ec2_tag_Zone": "eu-central-1c",
+        "ec2_virtualization_type": "hvm",
+        "ec2_vpc_id": "vpc-04fd72970059e8ab1"
+      }
+    }
+  },
+  "ami_0718a1ae90971ce4d": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "bs.testerization.cf": [
+    "my_bastion_server"
+  ],
+  "ci.testerization.cf": [
+    "my_ci_server"
+  ],
+  "ec2": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "eu-central-1": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "eu-central-1a": [
+    "my_proxy_server_0"
+  ],
+  "eu-central-1b": [
+    "my_proxy_server_1",
+    "my_ci_server"
+  ],
+  "eu-central-1c": [
+    "my_proxy_server_2",
+    "my_bastion_server"
+  ],
+  "i-06f571d6287945908": [
+    "my_proxy_server_1"
+  ],
+  "i-09db7c63f327eb292": [
+    "my_ci_server"
+  ],
+  "i-0dcb45356296f4a48": [
+    "my_proxy_server_2"
+  ],
+  "i-0f989ac1a12a6f5be": [
+    "my_bastion_server"
+  ],
+  "i-0fb9be28f577517e6": [
+    "my_proxy_server_0"
+  ],
+  "key_te20200227014418297300000002": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "platform_undefined": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "security_group_bs_dev_bastion_instance": [
+    "my_bastion_server"
+  ],
+  "security_group_ci_dev_ci": [
+    "my_ci_server"
+  ],
+  "security_group_sg_bastion": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2"
+  ],
+  "security_group_sg_ci": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2"
+  ],
+  "security_group_sg_egress": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "security_group_sg_proxy": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2"
+  ],
+  "tag_Name_my_bastion_server": [
+    "my_bastion_server"
+  ],
+  "tag_Name_my_ci_server": [
+    "my_ci_server"
+  ],
+  "tag_Name_my_proxy_server_0": [
+    "my_proxy_server_0"
+  ],
+  "tag_Name_my_proxy_server_1": [
+    "my_proxy_server_1"
+  ],
+  "tag_Name_my_proxy_server_2": [
+    "my_proxy_server_2"
+  ],
+  "tag_Namespace_bs": [
+    "my_bastion_server"
+  ],
+  "tag_Namespace_ci": [
+    "my_ci_server"
+  ],
+  "tag_Role_bastion": [
+    "my_bastion_server"
+  ],
+  "tag_Role_ci": [
+    "my_ci_server"
+  ],
+  "tag_Role_proxy": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2"
+  ],
+  "tag_Stage_dev": [
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "tag_Zone_eu_central_1a": [
+    "my_proxy_server_0"
+  ],
+  "tag_Zone_eu_central_1b": [
+    "my_proxy_server_1"
+  ],
+  "tag_Zone_eu_central_1c": [
+    "my_proxy_server_2"
+  ],
+  "type_t3a_small": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ],
+  "vpc_id_vpc_04fd72970059e8ab1": [
+    "my_proxy_server_1",
+    "my_proxy_server_0",
+    "my_proxy_server_2",
+    "my_bastion_server",
+    "my_ci_server"
+  ]
+}
+{ "_meta": { "hostvars": { "my_bastion_server": { "ansible_host": "3.127.28.146", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-0c307f73db1fe5d9e" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0f989ac1a12a6f5be", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.127.28.146", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T01:44:25.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1c", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-240-67.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.240.67", "ec2_public_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-034f307e166fbaf2e,sg-05747011ada28554c", "ec2_security_group_names": "bs-dev-bastion-instance,sg_egress", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-00902f51c7f777971", "ec2_tag_Name": "my-bastion-server", "ec2_tag_Namespace": "bs", "ec2_tag_Role": "bastion", "ec2_tag_Stage": "dev", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_ci_server": { "ansible_host": "3.122.133.227", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-07d97c79d282fbc74" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-09db7c63f327eb292", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.122.133.227", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T01:57:51.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1b", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-250-17.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.250.17", "ec2_public_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06d1ac2833df5757b", "ec2_security_group_names": "sg_egress,ci-dev-ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-03dc4508e11b36458", "ec2_tag_Name": "my-ci-server", "ec2_tag_Namespace": "ci", "ec2_tag_Role": "ci", "ec2_tag_Stage": "dev", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_0": { "ansible_host": "3.127.57.26", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-05064f93636b487ae" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0fb9be28f577517e6", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.127.57.26", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:14.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1a", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-210-33.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.210.33", "ec2_public_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-07f97be1b4219bd6c", "ec2_tag_Name": "my-proxy-server-0", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1a", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_1": { "ansible_host": "18.196.140.65", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-09e327e61cbaf5d96" }, "ec2_client_token": "", "ec2_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-06f571d6287945908", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "18.196.140.65", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:24.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1b", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-220-76.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.220.76", "ec2_public_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-05fad3db73c8b9017", "ec2_tag_Name": "my-proxy-server-1", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1b", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_2": { "ansible_host": "52.29.163.8", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-0cf9789b1210f4a64" }, "ec2_client_token": "", "ec2_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0dcb45356296f4a48", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "52.29.163.8", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:44.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1c", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-230-97.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.230.97", "ec2_public_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-06fbda187f02fa4ff", "ec2_tag_Name": "my-proxy-server-2", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1c", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" } } }, "ami_0718a1ae90971ce4d": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "bs.testerization.cf": [ "my_bastion_server" ], "ci.testerization.cf": [ "my_ci_server" ], "ec2": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "eu-central-1": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "eu-central-1a": [ "my_proxy_server_0" ], "eu-central-1b": [ "my_proxy_server_1", "my_ci_server" ], "eu-central-1c": [ "my_proxy_server_2", "my_bastion_server" ], "i-06f571d6287945908": [ "my_proxy_server_1" ], "i-09db7c63f327eb292": [ "my_ci_server" ], "i-0dcb45356296f4a48": [ "my_proxy_server_2" ], "i-0f989ac1a12a6f5be": [ "my_bastion_server" ], "i-0fb9be28f577517e6": [ "my_proxy_server_0" ], "key_te20200227014418297300000002": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "platform_undefined": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "security_group_bs_dev_bastion_instance": [ "my_bastion_server" ], "security_group_ci_dev_ci": [ "my_ci_server" ], "security_group_sg_bastion": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "security_group_sg_ci": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "security_group_sg_egress": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "security_group_sg_proxy": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "tag_Name_my_bastion_server": [ "my_bastion_server" ], "tag_Name_my_ci_server": [ "my_ci_server" ], "tag_Name_my_proxy_server_0": [ "my_proxy_server_0" ], "tag_Name_my_proxy_server_1": [ "my_proxy_server_1" ], "tag_Name_my_proxy_server_2": [ "my_proxy_server_2" ], "tag_Namespace_bs": [ "my_bastion_server" ], "tag_Namespace_ci": [ "my_ci_server" ], "tag_Role_bastion": [ "my_bastion_server" ], "tag_Role_ci": [ "my_ci_server" ], "tag_Role_proxy": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "tag_Stage_dev": [ "my_bastion_server", "my_ci_server" ], "tag_Zone_eu_central_1a": [ "my_proxy_server_0" ], "tag_Zone_eu_central_1b": [ "my_proxy_server_1" ], "tag_Zone_eu_central_1c": [ "my_proxy_server_2" ], "type_t3a_small": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "vpc_id_vpc_04fd72970059e8ab1": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ] }
+{ "_meta": { "hostvars": { "my_bastion_server": { "ansible_host": "3.127.28.146", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-0c307f73db1fe5d9e" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0f989ac1a12a6f5be", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.127.28.146", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T01:44:25.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1c", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-240-67.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.240.67", "ec2_public_dns_name": "ec2-3-127-28-146.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-034f307e166fbaf2e,sg-05747011ada28554c", "ec2_security_group_names": "bs-dev-bastion-instance,sg_egress", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-00902f51c7f777971", "ec2_tag_Name": "my-bastion-server", "ec2_tag_Namespace": "bs", "ec2_tag_Role": "bastion", "ec2_tag_Stage": "dev", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_ci_server": { "ansible_host": "3.122.133.227", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-07d97c79d282fbc74" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-09db7c63f327eb292", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.122.133.227", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T01:57:51.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1b", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-250-17.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.250.17", "ec2_public_dns_name": "ec2-3-122-133-227.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06d1ac2833df5757b", "ec2_security_group_names": "sg_egress,ci-dev-ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-03dc4508e11b36458", "ec2_tag_Name": "my-ci-server", "ec2_tag_Namespace": "ci", "ec2_tag_Role": "ci", "ec2_tag_Stage": "dev", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_0": { "ansible_host": "3.127.57.26", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-05064f93636b487ae" }, "ec2_client_token": "", "ec2_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0fb9be28f577517e6", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "3.127.57.26", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:14.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1a", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-210-33.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.210.33", "ec2_public_dns_name": "ec2-3-127-57-26.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-07f97be1b4219bd6c", "ec2_tag_Name": "my-proxy-server-0", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1a", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_1": { "ansible_host": "18.196.140.65", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-09e327e61cbaf5d96" }, "ec2_client_token": "", "ec2_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-06f571d6287945908", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "18.196.140.65", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:24.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1b", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-220-76.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.220.76", "ec2_public_dns_name": "ec2-18-196-140-65.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-05fad3db73c8b9017", "ec2_tag_Name": "my-proxy-server-1", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1b", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" }, "my_proxy_server_2": { "ansible_host": "52.29.163.8", "ec2__in_monitoring_element": false, "ec2_account_id": "531822475849", "ec2_ami_launch_index": "0", "ec2_architecture": "x86_64", "ec2_block_devices": { "sda1": "vol-0cf9789b1210f4a64" }, "ec2_client_token": "", "ec2_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com", "ec2_ebs_optimized": false, "ec2_eventsSet": "", "ec2_group_name": "", "ec2_hypervisor": "xen", "ec2_id": "i-0dcb45356296f4a48", "ec2_image_id": "ami-0718a1ae90971ce4d", "ec2_instance_profile": "", "ec2_instance_type": "t3a.small", "ec2_ip_address": "52.29.163.8", "ec2_item": "", "ec2_kernel": "", "ec2_key_name": "te20200227014418297300000002", "ec2_launch_time": "2020-02-27T10:12:44.000Z", "ec2_monitored": false, "ec2_monitoring": "", "ec2_monitoring_state": "disabled", "ec2_persistent": false, "ec2_placement": "eu-central-1c", "ec2_platform": "", "ec2_previous_state": "", "ec2_previous_state_code": 0, "ec2_private_dns_name": "ip-10-0-230-97.eu-central-1.compute.internal", "ec2_private_ip_address": "10.0.230.97", "ec2_public_dns_name": "ec2-52-29-163-8.eu-central-1.compute.amazonaws.com", "ec2_ramdisk": "", "ec2_reason": "", "ec2_region": "eu-central-1", "ec2_requester_id": "", "ec2_root_device_name": "/dev/sda1", "ec2_root_device_type": "ebs", "ec2_security_group_ids": "sg-05747011ada28554c,sg-06da3d8f8b82f8956,sg-097bfa216d5b50876,sg-0d649c62050c534df", "ec2_security_group_names": "sg_egress,sg_bastion,sg_proxy,sg_ci", "ec2_sourceDestCheck": "true", "ec2_spot_instance_request_id": "", "ec2_state": "running", "ec2_state_code": 16, "ec2_state_reason": "", "ec2_subnet_id": "subnet-06fbda187f02fa4ff", "ec2_tag_Name": "my-proxy-server-2", "ec2_tag_Role": "proxy", "ec2_tag_Zone": "eu-central-1c", "ec2_virtualization_type": "hvm", "ec2_vpc_id": "vpc-04fd72970059e8ab1" } } }, "ami_0718a1ae90971ce4d": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "bs.testerization.cf": [ "my_bastion_server" ], "ci.testerization.cf": [ "my_ci_server" ], "ec2": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "eu-central-1": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "eu-central-1a": [ "my_proxy_server_0" ], "eu-central-1b": [ "my_proxy_server_1", "my_ci_server" ], "eu-central-1c": [ "my_proxy_server_2", "my_bastion_server" ], "i-06f571d6287945908": [ "my_proxy_server_1" ], "i-09db7c63f327eb292": [ "my_ci_server" ], "i-0dcb45356296f4a48": [ "my_proxy_server_2" ], "i-0f989ac1a12a6f5be": [ "my_bastion_server" ], "i-0fb9be28f577517e6": [ "my_proxy_server_0" ], "key_te20200227014418297300000002": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "platform_undefined": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "security_group_bs_dev_bastion_instance": [ "my_bastion_server" ], "security_group_ci_dev_ci": [ "my_ci_server" ], "security_group_sg_bastion": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "security_group_sg_ci": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "security_group_sg_egress": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "security_group_sg_proxy": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "tag_Name_my_bastion_server": [ "my_bastion_server" ], "tag_Name_my_ci_server": [ "my_ci_server" ], "tag_Name_my_proxy_server_0": [ "my_proxy_server_0" ], "tag_Name_my_proxy_server_1": [ "my_proxy_server_1" ], "tag_Name_my_proxy_server_2": [ "my_proxy_server_2" ], "tag_Namespace_bs": [ "my_bastion_server" ], "tag_Namespace_ci": [ "my_ci_server" ], "tag_Role_bastion": [ "my_bastion_server" ], "tag_Role_ci": [ "my_ci_server" ], "tag_Role_proxy": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2" ], "tag_Stage_dev": [ "my_bastion_server", "my_ci_server" ], "tag_Zone_eu_central_1a": [ "my_proxy_server_0" ], "tag_Zone_eu_central_1b": [ "my_proxy_server_1" ], "tag_Zone_eu_central_1c": [ "my_proxy_server_2" ], "type_t3a_small": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ], "vpc_id_vpc_04fd72970059e8ab1": [ "my_proxy_server_1", "my_proxy_server_0", "my_proxy_server_2", "my_bastion_server", "my_ci_server" ] }

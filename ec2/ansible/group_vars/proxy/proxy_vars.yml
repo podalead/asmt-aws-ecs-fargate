@@ -5,7 +5,8 @@ apt_packages:
 
 #app_index: "{{ hostvars[inventory_hostname].ec2_tag_Name.[-1] }}"
 #app_role_hostnames: "{{ tag_Role_app }}"
-#app_private_ips: "{{  }}"
+app_private_ips:
+  - "123"
 
 nginx_config: "nginx.conf"
 nginx_site_config: "default"

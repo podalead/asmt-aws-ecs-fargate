@@ -9,14 +9,14 @@
   template:
     src: "{{ project_dir_profile }}/{{ profile }}/nginx/{{ nginx_site_config }}"
     dest: "/etc/nginx/sites-available/{{ nginx_site_config }}"
-  when:  nginx_site_configs is defined
+  when:  nginx_site_config is defined
 
 - name: Enable  nginx sites
   file:
     src: "/etc/nginx/sites-available/{{ nginx_site_config }}"
     dest: "/etc/nginx/sites-enabled/{{ nginx_site_config }}"
     state: link
-  when:  nginx_site_configs is defined
+  when:  nginx_site_config is defined
 
 - name: "Enable service"
   service:

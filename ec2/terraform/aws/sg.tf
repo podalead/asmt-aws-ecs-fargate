@@ -69,8 +69,8 @@ resource "aws_security_group_rule" "instance_input" {
   cidr_blocks = var.network_cidr_public_block
   type = "ingress"
   protocol = "tcp"
-  from_port = 8080
-  to_port = 8080
+  from_port = 900
+  to_port = 9000
 }
 
 resource "aws_security_group_rule" "proxy_https_input" {
