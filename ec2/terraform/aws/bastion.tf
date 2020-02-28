@@ -55,7 +55,7 @@ module "bastion" {
   }
 }
 
-resource "aws_route53_record" "default" {
+resource "aws_route53_record" "bastion" {
   count   = data.aws_route53_zone.main.zone_id != "" ? 1 : 0
   zone_id = data.aws_route53_zone.main.zone_id
   name    = var.bastion_namespace

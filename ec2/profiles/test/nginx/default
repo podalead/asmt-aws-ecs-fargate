@@ -6,6 +6,10 @@ server {
         server_name testerization.cf *.testerization.cf;
         listen      80;
 
+        if ($http_x_forwarded_proto = 'http') {
+            return 301 https://$host$request_uri;
+        }
+
         charset utf-8;
         source_charset utf-8;
 
