@@ -18,6 +18,10 @@
     state: link
   when:  nginx_site_config is defined
 
+- name: "install ssl certs"
+  shell:
+    cmd: "certbot --nginx -d {{ dns_name }}"
+
 - name: "Enable service"
   service:
     name: "nginx"
