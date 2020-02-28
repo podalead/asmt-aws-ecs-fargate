@@ -8,8 +8,8 @@ resource "aws_route53_record" "www" {
   type    = "A"
 
   alias {
-    name                   = module.alb.this_lb_dns_name
-    zone_id                = module.alb.this_lb_zone_id
+    name                   = module.elb.this_elb_dns_name
+    zone_id                = module.elb.this_elb_zone_id
     evaluate_target_health = true
   }
 }
