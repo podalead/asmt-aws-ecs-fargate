@@ -1,16 +1,16 @@
-- name:
+- name: "proxy_hostname"
   debug:
     msg: "proxy_hostname = {{ proxy_hostname }}"
 
-- name:
+- name: "proxy_index"
   debug:
     msg: "proxy_index = {{ proxy_index }}"
 
-- name:
+- name: "app_hostname"
   debug:
     msg: "app_hostname = {{ app_hostname }}, app_ip = {{ app_ip }}"
 
-- name:
+- name: "app_ip"
   debug:
     msg: "app_ip = {{ app_ip }}"
 
