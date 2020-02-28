@@ -28,7 +28,5 @@
     name: "{{ app_image_repo }}/{{ app_image_name }}"
     build:
       path: "{{ dir }}"
-      args:
-        JAR_FILE: "build/libs/*.jar"
     tag: "{{ app_tag }}"
     source: build
