@@ -73,7 +73,6 @@ case ${COMMAND} in
                         -input=false \
                         -refresh=true \
                         -var-file="${ROOT_PATH}/profiles/${PROFILE}/tf_vars.tfvars" \
-                        -var-file="${ROOT_PATH}/profiles/${PROFILE}/aws_cred.tfvars" \
                         -var="prefix=${PREFIX}" \
                         -var="profile=${PROFILE}" \
                         -var="pipe_root=${ROOT_PATH}"
@@ -88,7 +87,6 @@ case ${COMMAND} in
                         -refresh=true \
                         -auto-approve \
                         -var-file="${ROOT_PATH}/profiles/${PROFILE}/tf_vars.tfvars" \
-                        -var-file="${ROOT_PATH}/profiles/${PROFILE}/aws_cred.tfvars" \
                         -var="prefix=${PREFIX}" \
                         -var="profile=${PROFILE}" \
                         -var="pipe_root=${ROOT_PATH}"
