@@ -4,7 +4,7 @@ apt_packages:
   - "mc"
 
 proxy_hostname: "{{ hostvars[inventory_hostname][ec2_tag_Name] }}"
-proxy_index: "{{ app_role_hostname[-1] }}"
+proxy_index: "{{ proxy_hostname[-1] }}"
 app_hostname: "my_application_server_{{ proxy_index }}"
 app_ip: "{{ hostvars[app_hostname][private_ip_address]  }}"
 
