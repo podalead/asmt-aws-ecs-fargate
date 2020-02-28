@@ -1,6 +1,18 @@
 - name:
   debug:
-    msg: "proxy_hostname = {{ proxy_hostname }}, proxy_index = {{ proxy_index }}, app_hostname = {{ app_hostname }}, app_ip = {{ app_ip }}"
+    msg: "proxy_hostname = {{ proxy_hostname }}"
+
+- name:
+  debug:
+    msg: "proxy_index = {{ proxy_index }}"
+
+- name:
+  debug:
+    msg: "app_hostname = {{ app_hostname }}, app_ip = {{ app_ip }}"
+
+- name:
+  debug:
+    msg: "app_ip = {{ app_ip }}"
 
 - name: "Upload nginx configs"
   copy:
