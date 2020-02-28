@@ -6,6 +6,9 @@ server {
         server_name testerization.cf *.testerization.cf;
         listen      80;
 
+        charset utf-8;
+        source_charset utf-8;
+
         error_log  /var/log/nginx/app.error.log;
         access_log /var/log/nginx/app.access.log timed_combined;
 
@@ -15,9 +18,9 @@ server {
 
                 proxy_pass         http://testerizator;
                 proxy_http_version 1.1;
-                proxy_set_header   Upgrade $http_upgrade;
-                proxy_set_header   Connection "upgrade";
                 auth_basic off;
+                charset utf-8;
+                source_charset utf-8;
         }
 }
 
