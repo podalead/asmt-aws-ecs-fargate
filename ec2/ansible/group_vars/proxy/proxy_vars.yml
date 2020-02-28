@@ -6,7 +6,7 @@ apt_packages:
 proxy_hostname: "{{ inventory_hostname }}"
 proxy_index: "{{ proxy_hostname[-1] }}"
 app_hostname: "my_application_server_{{ proxy_index }}"
-app_ip: "{{ hostvars[app_hostname]['private_ip_address']  }}"
+app_ip: "{{ hostvars[app_hostname]['ec2_private_ip_address']  }}"
 
 nginx_config: "nginx.conf"
 nginx_site_config: "default"
