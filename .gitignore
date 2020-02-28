@@ -13,7 +13,8 @@
 *.tfstate.*
 
 # Crash log files
-crash.log
+*.log
+**test.json
 
 credentials*
 
