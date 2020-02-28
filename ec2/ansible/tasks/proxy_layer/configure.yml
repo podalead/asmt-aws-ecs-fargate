@@ -1,3 +1,7 @@
+- name:
+  debug:
+    msg: "proxy_hostname = {{ proxy_hostname }}, proxy_index = {{ proxy_index }}, app_hostname = {{ app_hostname }}, app_ip = {{ app_ip }}"
+
 - name: "Upload nginx configs"
   copy:
     src: "{{ project_dir_profile }}/{{ profile }}/nginx/{{ nginx_config }}"
